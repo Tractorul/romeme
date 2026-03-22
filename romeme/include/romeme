@@ -1,0 +1,76 @@
+#ifndef ROMEME_H
+#define ROMEME_H
+
+#include <iostream>
+#include <cstdlib>
+
+namespace romeme {
+
+    class Sarmale {
+    public:
+        template<typename T>
+        Sarmale& operator<<(const T& x) {
+            std::cout << x;
+            return *this;
+        }
+
+        Sarmale& operator<<(std::ostream& (*pf)(std::ostream&)) {
+            std::cout << pf;
+            return *this;
+        }
+    };
+
+    class Ciorba {
+    public:
+        template<typename T>
+        Ciorba& operator>>(T& x) {
+            std::cin >> x;
+            return *this;
+        }
+    };
+
+    inline Sarmale sarmale;
+    inline Ciorba ciorba;
+
+    inline const char* paine = " ";
+    inline const char* festin = "\n🍲🍖🍷-------------------🍷🍖🍲\n";
+
+    inline const char* rosu = "\033[31m";
+    inline const char* verde = "\033[32m";
+    inline const char* galben = "\033[33m";
+    inline const char* albastru = "\033[34m";
+    inline const char* reset = "\033[0m";
+
+    inline void arde(const char* msg) {
+        std::cout << rosu << "💀 AI ARS SARMALele: " << msg << reset << std::endl;
+        std::exit(1);
+    }
+
+}
+
+#define sarmale romeme::sarmale
+#define ciorba romeme::ciorba
+#define gogosi int
+#define zeama float
+#define dublu double
+#define mic bool
+#define adevarat true
+#define fals false
+#define daca(cond) if(cond)
+#define altfel else
+#define cat_timp(cond) while(cond)
+#define pentru(i,a,b) for(int i=(a); i<=(b); i++)
+#define desert std::endl
+#define paine romeme::paine
+#define festin romeme::festin
+#define rosu romeme::rosu
+#define verde romeme::verde
+#define galben romeme::galben
+#define albastru romeme::albastru
+#define reset romeme::reset
+#define arde(msg) romeme::arde(msg)
+#define mananca(x) x--
+#define portie_mare(x) x*=2
+#define flamanzi while(true)
+
+#endif

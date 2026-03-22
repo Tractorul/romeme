@@ -1,0 +1,47 @@
+#ifndef DINUSTREAM
+#define DINUSTREAM
+
+#include <iostream>
+
+namespace dinu {
+
+    class DOut {
+    public:
+        template<typename T>
+        DOut& operator<<(const T& x) {
+            std::cout << x;
+            return *this;
+        }
+
+        DOut& operator<<(std::ostream& (*pf)(std::ostream&)) {
+            std::cout << pf;
+            return *this;
+        }
+    };
+
+    class DIn {
+    public:
+        template<typename T>
+        DIn& operator>>(T& x) {
+            std::cin >> x;
+            return *this;
+        }
+    };
+
+    static DOut dout;
+    static DIn din;
+}
+
+#define dout dinu::dout
+#define din dinu::din
+
+#define whiledinu(cond) while(cond)
+#define ifdinu(cond) if(cond)
+#define elsedinu else
+#define fordinu(i,a,b) for(int i=a;i<=b;i++)
+#define dendl std::endl
+#define dint int
+
+
+
+#endif
