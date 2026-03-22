@@ -3,7 +3,13 @@ C++ but powered by Romanian food 🍲🍩 (meme library)
 # 🇷🇴🍲 romeme
 
 C++ but written by a hungry Romanian.
+#How to download 🔗
 
+#Windows
+    curl -O https://raw.githubusercontent.com/Tractorul/romeme/refs/heads/main/romeme/include/romeme
+
+#Any Linux distribution
+    wget https://raw.githubusercontent.com/Tractorul/romeme/refs/heads/main/romeme/include/romeme
 ## 🍩 Features
 
 - `gogosi` instead of `int`
