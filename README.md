@@ -26,7 +26,7 @@ C++ but written by a hungry Romanian.
 ## 😂 Example
 
 ```cpp
-#include "romeme.h"
+#include "romeme"
 
 int main() {
     gogosi x;
